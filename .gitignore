@@ -1,3 +1,10 @@
+# custom  files
+
+11_bgl2_00/**
+11_bgl2_00_e10/**
+5_epoch_13_spirit2_00/**
+13_spirit2_00/**
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
