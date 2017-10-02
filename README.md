@@ -1,4 +1,8 @@
 # Unsupervised Signature Extraction for Forensic Logs
+## TODO
+* clean and publish rest of experiments
+* finish documetntation
+
 
 ## Description
 This repository contains the experiments of the paper "Unsupervised Signature Extraction from forensic logs."
@@ -10,7 +14,7 @@ This repository contains the experiments of the paper "Unsupervised Signature Ex
 
 ## Prepare Virtual environemt
 * python3 -m venv .env
-* 
+*
 
 ## Install dependencies
 * tensorflow==1.0.1
