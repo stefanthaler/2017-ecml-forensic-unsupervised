@@ -18,7 +18,7 @@ if g.REGENERATE_VOCABULARY_FILES or not os.path.exists(g.WORD_TO_INDEX_FILE):
         if i==10000:
             print("Estimated time for tokenization ~ %.2f (in min)"%(total_lines *(time.time()-start_time)/10000.0/60.0))
         # decode and to lower
-        logline = logline.decode('utf-8').lower()
+        logline = logline.lower()
         # add start and end token
         for char in g.SPLIT_TOKEN:
             logline = logline.replace(char, ' ' + char + ' ')
