@@ -23,7 +23,9 @@ This repository contains the experiments of the paper "Unsupervised Signature Ex
 # Run the experiments
 * ipython3 notebook
 
-# Datasets
+# Datasets (https://www.usenix.org/cfdr-data)
+* BlueGene/L: http://0b4af6cdc2f0c5998459-c0245c5c937c5dedcca3f1764ecc9b2f.r43.cf2.rackcdn.com/hpc4/bgl2.gz
+* Spirit2: http://0b4af6cdc2f0c5998459-c0245c5c937c5dedcca3f1764ecc9b2f.r43.cf2.rackcdn.com/hpc4/spirit2.gz
 
 
 # Work used in this paper:
