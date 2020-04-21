@@ -13,15 +13,16 @@ This repository contains the experiments of the paper "Unsupervised Signature Ex
 * pip install -r requirements.txt
 
 # Obtain and Prepare data
-* python prepare_dataset.py -e 11
+* python prepare_dataset.py -e 11  (for BGL)
+* python prepare_dataset.py -e 13  (for Spirit2)
 
 # Run the experiments
 * jupyter notebook
 * set your experiment_id in Section "Hyperparameter":
 * choose experiment_nr = 6 # 6 (unix forensic), 11 (bgl), 13 (spirit2)
+* click "Clear and run all"
 
-
-# External Datasets (https://www.usenix.org/cfdr-data)
+# Datasets (https://www.usenix.org/cfdr-data)
 * BlueGene/L: http://0b4af6cdc2f0c5998459-c0245c5c937c5dedcca3f1764ecc9b2f.r43.cf2.rackcdn.com/hpc4/bgl2.gz
 * Spirit2: http://0b4af6cdc2f0c5998459-c0245c5c937c5dedcca3f1764ecc9b2f.r43.cf2.rackcdn.com/hpc4/spirit2.gz
 
