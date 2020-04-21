@@ -1,6 +1,6 @@
 tensorflow-gpu==1.0.1
 # tensorflow==1.0.1 ## cpu only version
-nltk==3.2.5
+nltk==3.4.5
 matplotlib==2.0.2
 scipy==0.19.1
 scikit-learn==0.19.0
