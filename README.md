@@ -2,6 +2,9 @@
 
 This repository contains the experiments of the paper "Unsupervised Signature Extraction from forensic logs."
 
+# IMPORTANT NOTE
+If you have issues with understanding or running the code, please open an issue on github.
+
 
 # Perparation:
 ## Requirements
