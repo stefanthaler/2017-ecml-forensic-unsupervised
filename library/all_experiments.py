@@ -13,3 +13,19 @@ SPLIT_TOKEN ={
     "default":['.', '"' , "'" , ',' , '(', ')', '!', '?', ';', ':', "\\" , '/', '[',']',"=","-",'_' ],
     10:['"'," "],
 }
+
+
+DOWNLOAD_URLS = {
+    11: "http://0b4af6cdc2f0c5998459-c0245c5c937c5dedcca3f1764ecc9b2f.r43.cf2.rackcdn.com/hpc4/bgl2.gz",
+    13: "http://0b4af6cdc2f0c5998459-c0245c5c937c5dedcca3f1764ecc9b2f.r43.cf2.rackcdn.com/hpc4/spirit2.gz"
+}
+
+DOWNLOAD_FN = {
+    11:"bgl2.gz",
+    13:"spirit2.gz"
+}
+
+NUM_STRATA = {
+    11:  10,
+    13: 380,
+}

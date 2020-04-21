@@ -1,29 +1,27 @@
 # Unsupervised Signature Extraction for Forensic Logs
-## TODO
-* clean and publish rest of experiments
-* finish documetntation
 
-
-## Description
 This repository contains the experiments of the paper "Unsupervised Signature Extraction from forensic logs."
 
 
-
+# Perparation:
 ## Requirements
-* python3.5, python3-pip, python3-venv
+* Linux: python3.5, python3-pip, python3-venv
 
-## Prepare Virtual environemt
+## Setup
 * python3 -m venv .env
-*
+* . .env/bin/activate.fish / source .env/bin/activate
+* pip install -r requirements.txt
 
-## Install dependencies
-* tensorflow==1.0.1
-
+# Obtain and Prepare data
+* python prepare_dataset.py -e 11
 
 # Run the experiments
-* ipython3 notebook
+* jupyter notebook
+* set your experiment_id in Section "Hyperparameter":
+* choose experiment_nr = 6 # 6 (unix forensic), 11 (bgl), 13 (spirit2)
 
-# Datasets (https://www.usenix.org/cfdr-data)
+
+# External Datasets (https://www.usenix.org/cfdr-data)
 * BlueGene/L: http://0b4af6cdc2f0c5998459-c0245c5c937c5dedcca3f1764ecc9b2f.r43.cf2.rackcdn.com/hpc4/bgl2.gz
 * Spirit2: http://0b4af6cdc2f0c5998459-c0245c5c937c5dedcca3f1764ecc9b2f.r43.cf2.rackcdn.com/hpc4/spirit2.gz
 

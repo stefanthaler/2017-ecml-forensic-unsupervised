@@ -29,7 +29,7 @@ r"^LOC TIME_STAMP DATE USER DATE USRE_GRP /usr/sbin/gmetad\[\d+?\]: Unable to wr
 r"^LOC TIME_STAMP DATE USER DATE USRE_GRP \.\.\.\.\.\.\. : PRQ implemented: .+?$",
 r"^LOC TIME_STAMP DATE USER DATE USRE_GRP \.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\.\. done\.$",
 r"^LOC TIME_STAMP DATE USER DATE USRE_GRP \d\d 000 00 1 0 0 0 0 0 0 00$",
-r"^LOC TIME_STAMP DATE USER DATE USRE_GRP \login\(pam_unix\)\[\d+?\]: session opened for user .+? by LOGIN\(uid=.+?\)$",
+r"^LOC TIME_STAMP DATE USER DATE USRE_GRP login\(pam_unix\)\[\d+?\]: session opened for user .+? by LOGIN\(uid=.+?\)$",
 r"^LOC TIME_STAMP DATE USER DATE USRE_GRP ACPI: IOAPIC \(id\[.+?\] address\[.+?\] global_irq_base\[.+?\]\)$",
 r"^LOC TIME_STAMP DATE USER DATE USRE_GRP acpid: acpid shutdown succeeded$",
 r"^LOC TIME_STAMP DATE USER DATE USRE_GRP acpid: acpid startup succeeded$",
@@ -737,3 +737,33 @@ def extract_pattern_id(message):
         if re.search(pattern, message):
             return pattern_id+1 # pattern_id + 1 because 0 is reserved
     return 0 # no pattern to parse log line, unknown message
+
+if __name__ == '__main__':
+    import time
+
+    # parse command line arguments
+    parser = argparse.ArgumentParser(description='Parses logfile, prints first line that does not match one of the known regex')
+    parser.add_argument('-if', '--in_file', type=str, default="data_raw/spirit2_00.log", help='')
+    parser.add_argument('-c', '--clean', type=bool, default=False, help='' )
+    args = parser.parse_args()
+    total_lines = 716577.0
+    one_percent_of_lines = int(total_lines/100)
+
+    if args.clean:
+
+        of = open("%s_clean"%args.in_file, "w")
+        with open("%s"%args.in_file,"r") as logs:
+
+            for i,log_line in enumerate(logs):
+
+                split_line = log_line.split(" ")
+                split_line[2] = "LOC"
+                split_line[3] = "TIME_STAMP"
+                split_line[4] = "DATE"
+                split_line[5] = "USER"
+                split_line[6] = "DATE"
+                split_line[7] = "USRE_GRP"
+
+                if i % one_percent_of_lines ==0 : print("%i lines processed, %.2f done "%(i,100*i / total_lines ))
+                of.write(" ".join(split_line[2:]))
+        of.close()

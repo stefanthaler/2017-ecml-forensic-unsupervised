@@ -4,6 +4,12 @@
 11_bgl2_00_e10/**
 5_epoch_13_spirit2_00/**
 13_spirit2_00/**
+data_raw/*log*
+data_raw/*gz*
+results/**
+data/bgl2_00.log
+data/spirit2_00.log
+data/spirit2.log
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
