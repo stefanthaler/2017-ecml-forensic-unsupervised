@@ -1,4 +1,4 @@
-tensorflow-gpu==1.0.1
+tensorflow-gpu==2.5.1
 # tensorflow==1.0.1 ## cpu only version
 nltk==3.2.5
 matplotlib==2.0.2
